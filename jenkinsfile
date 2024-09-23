@@ -1,0 +1,25 @@
+pipeline{ 
+	agent any
+	stages{
+	stage("build")
+	{
+	steps{
+		echo "cheking pox.xml file"
+	     }
+	}
+	stage("validate")
+	{
+	steps{
+		echo "mvn clean package"
+		}
+	}
+	stage("jar file")
+	{
+	steps{
+		echo"java -jar target\MavenProject-0.0.1-SNAPSHOT.jar
+		}
+	}
+    }
+  }
+
+
